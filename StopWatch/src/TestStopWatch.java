@@ -1,8 +1,12 @@
+import java.lang.Math;
 public class TestStopWatch {
     public static void main(String[] args) {
         StopWatch s = new StopWatch();
         s.start();
-        int[] arr = {1, 2, 3, 5, 7, 23, 123, 5, 1, 123, 123, 23, 35565, 23, 123, 6, 357, 7};
+        int[] arr = new int[100000];
+        for(int i = 0; i< 100000; i ++){
+            arr[i] = (int)(100 * Math.random());
+        }
         arr = SelectionSort.selectionSort(arr);
         for (int i : arr) {
             System.out.print(i + " ");
